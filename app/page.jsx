@@ -1,7 +1,6 @@
 import React from 'react';
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
 import DownloadButton from "@/components/DownloadButton";
 
 const Home = () => {
