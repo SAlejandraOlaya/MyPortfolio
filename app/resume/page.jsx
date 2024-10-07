@@ -9,7 +9,7 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiMongodb, SiPostgresql } from "react-icons/si";
 
 // about data
 const about = {
@@ -108,6 +108,10 @@ const skills = {
       name: "react.js",
     },
     {
+      icon: <SiTypescript />,
+      name: "typescript",
+    },
+    {
       icon: <SiNextdotjs />,
       name: "next.js",
     },
@@ -122,6 +126,15 @@ const skills = {
     {
       icon: <FaFigma />,
       name: "figma",
+
+    },
+    {
+      icon: <SiMongodb />,
+      name: "mongodb",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgresql",
     },
   ],
 };
@@ -137,6 +150,7 @@ import {
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+
 
 const Resume = () => {
   return (
@@ -155,9 +169,9 @@ const Resume = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experiencia</TabsTrigger>
-            <TabsTrigger value="education">Educacion</TabsTrigger>
+            <TabsTrigger value="education">Educación</TabsTrigger>
             <TabsTrigger value="skills">Habilidades</TabsTrigger>
-            <TabsTrigger value="about">Sobre mi</TabsTrigger>
+            <TabsTrigger value="about">Sobre mí</TabsTrigger>
           </TabsList>
 
           {/* content */}
@@ -166,24 +180,20 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-start gap-2"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl max-w-[260px] text-left">
                             {item.position}
                           </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <div className="flex items-start gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent mt-2 flex-shrink-0"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
@@ -198,24 +208,20 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
-                </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] py-6 px-10 rounded-xl flex flex-col justify-center items-start gap-2"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl max-w-[260px] text-left">
                             {item.degree}
                           </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <div className="flex items-start gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent mt-2 flex-shrink-0"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>
@@ -227,7 +233,7 @@ const Resume = () => {
             </TabsContent>
 
             {/* skills */}
-            <TabsContent value="skills" className="w-full h-full">
+            <TabsContent value="skills" className="w-full h-full mb-10">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
