@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 
 const DownloadButton = () => {
     const handleDownload = () => {
-        const pdfUrl = '/CVAlejandraOlaya1.3.pdf';
+        const pdfUrl = '/CVAlejandraOlayav1.3.pdf';
         const link = document.createElement('a');
         link.href = pdfUrl;
         link.download = 'AlejandraOlayaCV.pdf';
