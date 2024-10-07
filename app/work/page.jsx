@@ -19,7 +19,7 @@ const projects = [
     description:
       "Proyecto desarrollado en grupo bajo la metodología ágil Scrum, en la cual trabajé del lado del Frontend. La aplicación permite a los usuarios explorar eventos musicales, comprar entradas y acceder a beneficios exclusivos como miembros premium.",
     stack: [{ name: "Next.js" }, { name: "TailwindCSS" }, { name: "Typescript" }],
-    image: "/assets/work/imageRadioticket.png",
+    image: "/assets/work/imageradioticket.png",
     live: "https://front-radio-ticket.vercel.app/",
     github: "https://github.com/SAlejandraOlaya/front-radio-ticket",
   },
