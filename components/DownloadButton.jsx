@@ -22,7 +22,7 @@ const DownloadButton = () => {
             className="flex items-center gap-2 uppercase"
             onClick={handleDownload}
         >
-            <span>Download CV</span>
+            <span>Descargar CV</span>
             <FiDownload className="text-xl" />
         </Button>
     );
