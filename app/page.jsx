@@ -14,9 +14,8 @@ const Home = () => {
             <h1 className="mb-6 h1">
               ¡Hola!soy <br /> <span className="text-accent">Alejandra</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              Fusiono mi experiencia médica con la pasión por el desarrollo web.
-              Creo soluciones digitales intuitivas y de alto impacto.
+            <p className="max-w-[500px] mb-9 text-justify text-white/80">
+              Desarrolladora Full Stack apasionada por la tecnología y el aprendizaje continuo. Con formación en medicina, he orientado mi carrera hacia el desarrollo de software.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col items-center gap-8 xl:flex-row">
