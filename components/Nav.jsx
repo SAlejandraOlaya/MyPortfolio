@@ -9,7 +9,7 @@ const links = [
     path: "/",
   },
   {
-    name: "Resumen",
+    name: "Acerca de mí",
     path: "/resume",
   },
   {
@@ -32,7 +32,7 @@ const Nav = () => {
             href={link.path}
             key={index}
             className={`${link.path === pathname && "text-accent border-b-2 border-accent"
-              } capitalize font-medium hover:text-accent transition-all`}
+              }  font-medium hover:text-accent transition-all`}
           >
             {link.name}
           </Link>
