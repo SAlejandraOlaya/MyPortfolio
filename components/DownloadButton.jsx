@@ -1,18 +1,12 @@
-'use client';
-
+'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 const DownloadButton = () => {
-    const handleDownload = () => {
+    const handleOpen = () => {
         const pdfUrl = '/CV_Alejandra_Olaya_v1_3.pdf';
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.download = 'AlejandraOlayaCV1.3.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        window.open(pdfUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
@@ -20,10 +14,10 @@ const DownloadButton = () => {
             variant="outline"
             size="lg"
             className="flex items-center gap-2 uppercase"
-            onClick={handleDownload}
+            onClick={handleOpen}
         >
             <span>Descargar CV</span>
-            <FiDownload className="text-xl" />
+            <FiExternalLink className="text-xl" />
         </Button>
     );
 };
